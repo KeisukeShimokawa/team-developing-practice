@@ -1,0 +1,24 @@
+on:
+  # featureブランチからpushした際にjobを起動 
+  push:
+    branches:
+      - "feature/*"
+  
+jobs:
+  # jobs.<job_id>には、jobsオブジェクトごとに一意になるように設定する
+  generateTOC:
+    # Githubに表示されるジョブの名前
+    name: TOC Generator
+    # ジョブを実行するマシンの種類
+    runs-on: ubuntu-latest
+    # 1つのジョブ内で実行する一連のステップを設定する
+    steps:
+        #  ステップの名称
+       - name: toc-generator
+        # ステップの一部として実行するアクションを選択
+        uses: technote-space/toc-generator@v3
+        # アクションの入力パラメータ
+        with:
+          TARGET_PATHS: "README.md,*/README.md"
+          TOC_TITLE: "目次"
+          FOLDING: true
