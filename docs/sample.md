@@ -1,3 +1,25 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<details>
+<summary>目次</summary>
+
+- [&#035;2 curlとpostmanに慣れる](#2-curl%E3%81%A8postman%E3%81%AB%E6%85%A3%E3%82%8C%E3%82%8B)
+  - [課題1](#%E8%AA%B2%E9%A1%8C1)
+    - [得られた知見](#%E5%BE%97%E3%82%89%E3%82%8C%E3%81%9F%E7%9F%A5%E8%A6%8B)
+      - [`Host`](#host)
+      - [`X-Amzn-Trace-Id`](#x-amzn-trace-id)
+  - [課題2](#%E8%AA%B2%E9%A1%8C2)
+    - [得られた知見](#%E5%BE%97%E3%82%89%E3%82%8C%E3%81%9F%E7%9F%A5%E8%A6%8B-1)
+      - [`origin`](#origin)
+  - [課題3](#%E8%AA%B2%E9%A1%8C3)
+  - [課題4](#%E8%AA%B2%E9%A1%8C4)
+    - [得られた知見](#%E5%BE%97%E3%82%89%E3%82%8C%E3%81%9F%E7%9F%A5%E8%A6%8B-2)
+  - [課題5](#%E8%AA%B2%E9%A1%8C5)
+  - [参考資料](#%E5%8F%82%E8%80%83%E8%B3%87%E6%96%99)
+
+</details>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # #2 curlとpostmanに慣れる
 
 課題に使用するcurlのバージョンは以下にな\る。
