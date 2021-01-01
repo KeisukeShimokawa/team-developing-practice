@@ -2,6 +2,7 @@ on:
   # featureブランチからpushした際にjobを起動 
   push:
     branches:
+      # "*"1つはスラッシュ("/")にはマッチしない
       - "feature/*"
   
 jobs:
@@ -19,6 +20,6 @@ jobs:
         uses: technote-space/toc-generator@v3
         # アクションの入力パラメータ
         with:
-          TARGET_PATHS: "README.md,*/README.md"
+          TARGET_PATHS: "**/README.md"
           TOC_TITLE: "目次"
           FOLDING: true
