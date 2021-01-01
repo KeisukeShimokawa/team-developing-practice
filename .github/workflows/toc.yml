@@ -15,5 +15,5 @@ jobs:
         with:
           FOLDING: true
           TOC_TITLE: "**目次**"
-          TARGET_PATHS: "**/README.md"
+          TARGET_PATHS: "**/*.md"
           
