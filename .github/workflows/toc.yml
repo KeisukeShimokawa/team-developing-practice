@@ -8,7 +8,7 @@ jobs:
     name: TOC Generator
     runs-on: ubuntu-latest
     steps:
-       - name: toc-generator
+      - name: toc-generator
         uses: technote-space/toc-generator@v3
         with:
           TARGET_PATHS: "README.md"
