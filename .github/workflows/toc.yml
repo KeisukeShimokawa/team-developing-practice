@@ -1,14 +1,22 @@
 name: toc-generator
 
+# on:
+#   push:
+#     branches:
+#       - "feature/*"
+
+# mainブランチにマージされた時に実施するように変更
 on:
-  push:
+  pull_request:
     branches:
       - "feature/*"
-  
+    types: [closesd]
+
 jobs:
   generateTOC:
     name: TOC Generator
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
       - name: toc-generator
         uses: technote-space/toc-generator@v3
