@@ -9,7 +9,7 @@ name: toc-generator
 on:
   pull_request:
     branches:
-      - "feature/*"
+      - "main"
     types: [closesd]
 
 jobs:
