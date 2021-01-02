@@ -5,12 +5,9 @@ name: toc-generator
 #     branches:
 #       - "feature/*"
 
-# mainブランチにマージされた時に実施するように変更
 on:
   pull_request:
-    branches:
-      - "main"
-    types: [closesd]
+    types: [opened, synchronize, reopened, closed]
 
 jobs:
   generateTOC:
