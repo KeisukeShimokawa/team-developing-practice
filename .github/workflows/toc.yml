@@ -7,7 +7,10 @@ name: toc-generator
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, closed]
+    branches:
+      - "feature/*"
+    types: [opened]
+      
 
 jobs:
   generateTOC:
