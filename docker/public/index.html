@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="fetch-get">Fetch GET</button>
+    <script>
+
+        const btn = document.getElementById("fetch-get");
+        btn.addEventListener("click", () => {
+            getFetch();
+        })
+
+        async function getFetch() {
+            const res = await fetch("http://localhost:8080", {
+                method: "GET"
+            })
+            const data = await res.json();
+            console.log(data);
+        }
+
+    </script>
+</body>
+</html>
