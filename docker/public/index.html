@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="fetch-get">Fetch GET</button>
+    <br>
+    <button id="fetch-post">Fetch POST</button>
+    <script>
+
+        const getBtn = document.getElementById("fetch-get");
+        getBtn.addEventListener("click", () => {
+            getFetch();
+        })
+
+        async function getFetch() {
+            const res = await fetch("http://localhost:8080/get", {
+                method: "GET"
+            })
+            const data = await res.json();
+            console.log(data);
+        }
+
+        const postBtn = document.getElementById("fetch-post");
+        postBtn.addEventListener("click", () => {
+            postfetch();
+        })
+
+        async function postfetch() {
+            const res = await fetch("http://localhost:8080/post", {
+                method: "POST"
+            })
+            const data = await res.json();
+            console.log(data);
+        }
+
+    </script>
+</body>
+</html>
