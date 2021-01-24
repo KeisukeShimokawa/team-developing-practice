@@ -2,7 +2,7 @@
 
 ## 記録用
 
-1. VSCodeのRemote Containersで環境を立ち上げる
+1. VSCode の Remote Containers で環境を立ち上げる
 
    ```docker
    # 使用するDockerfileは以下になる
@@ -31,10 +31,10 @@
    $ yarn run tsc --init
    ```
 
-5. ESLintの初期化
+5. ESLint の初期化
 
    ```bash
-   # -> 
+   # ->
    $ yarn run eslint --init
 
    # -> To check syntax and find problems
@@ -51,28 +51,22 @@
 
    ```json
    {
-      "env": {
-         "browser": true,
-         "es2021": true
-      },
-      "extends": [
-         "eslint:recommended",
-         "plugin:@typescript-eslint/recommended"
-      ],
-      "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-         "ecmaVersion": 12,
-         "sourceType": "module"
-      },
-      "plugins": [
-         "@typescript-eslint"
-      ],
-      "rules": {
-      }
+     "env": {
+       "browser": true,
+       "es2021": true
+     },
+     "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+     "parser": "@typescript-eslint/parser",
+     "parserOptions": {
+       "ecmaVersion": 12,
+       "sourceType": "module"
+     },
+     "plugins": ["@typescript-eslint"],
+     "rules": {}
    }
    ```
 
-6. prettierの設定を行う
+6. prettier の設定を行う
 
    ```bash
    # install prettier automatically formator
@@ -80,7 +74,7 @@
    $ yarn add -D prettier eslint-config-prettier
    ```
 
-7. ESLintの設定にprettierを追加する
+7. ESLint の設定に prettier を追加する
 
    ```json
    "extends": [
@@ -91,7 +85,7 @@
    ],
    ```
 
-8. prettierの設定を追加する
+8. prettier の設定を追加する
 
    ```json
    // .prettierrc.json
@@ -103,41 +97,44 @@
    }
    ```
 
-9. VSCodeで対応する拡張機能を導入する
+9. VSCode で対応する拡張機能を導入する
 
    ```json
    // .devcontainer/devcontainer.json
    "extensions": [
-		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode"
-	],
+   	"dbaeumer.vscode-eslint",
+   	"esbenp.prettier-vscode"
+   ],
    ```
 
-10. TypeScriptで実験する
+10. TypeScript で実験する
 
-   ```json
-   // tsconfig.json
-   {
-      "compilerOptions": {
-         "target": "ESNEXT",
-         "module": "commonjs",
-         "outDir": "./dist",
-         "rootDir": "./src",
-         "removeComments": true,
-         "moduleResolution": "node",
-         "esModuleInterop": true,
-         "skipLibCheck": true,
-         "forceConsistentCasingInFileNames": true
-      }
-   }
-   ```
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ESNEXT",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
+```
 
-   nodeとexpressのためにファイルを適当に作って実験する
+node と express のためにファイルを適当に作って実験する
 
-   ```bash
-   $ yarn add -D @types/node @types/express
-   ```
+```bash
+$ yarn add -D @types/node @types/express
+```
 
 ## 参考資料
 
-- [TypeScriptのプロジェクトにESLintとPrettierを導入する方法（+VSCodeでの設定）](https://qiita.com/yuma-ito-bd/items/cca7490fd7e300bbf169)
+- [TypeScript のプロジェクトに ESLint と Prettier を導入する方法（+VSCode での設定）](https://qiita.com/yuma-ito-bd/items/cca7490fd7e300bbf169)
+- [VSCode + ESLint + Prettier + React + TypeScript （自分用メモ Fall, 2020）](https://qiita.com/sprout2000/items/ee4fc97f83f45ba1d227)
+- [VSCode で ESLint+typescript-eslint+Prettier を導入する（2020/11/14 修正）](https://qiita.com/madono/items/a134e904e891c5cb1d20)
+- [Step by Step で始める ESLint](https://qiita.com/howdy39/items/6e2c75861bc5a14b2acf)
